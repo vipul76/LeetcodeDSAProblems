@@ -1,12 +1,14 @@
-package com.dsa.striver.Arrays.easy;
+package com.dsa.striver.Arrays;
 
 import java.util.Arrays;
 
 public class MergeSortedArray {
     public static void main(String[] args) {
-        int[] nums1 = {1,3,5};
-        int[] nums2 = {2,4,6,8,9,10};
+        /*int[] nums1 = {1,3,5};
+        int[] nums2 = {2,4,6,8,9,10};*/
         //int m = 3,n=3;
+        int[] nums1 = {1,2,3};
+        int[] nums2 = {2,5,6};
 
         int[] sortedArray = merge(nums1,nums2);
         Arrays.stream(sortedArray).forEach((s) -> System.out.print(s + " "));
