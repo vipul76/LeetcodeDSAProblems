@@ -35,7 +35,7 @@ public class SumOfEvenOrOdd {
         System.out.println("Even sum : "+ sumEven);
         System.out.println("Odd Sum : "+ sumOdd);
 
-        //COllecting the whole list even and the odd number
+        //Collecting the whole list even and the odd number
 
         Map<Boolean,List<Integer>> partitionList = numbers
                 .stream()
