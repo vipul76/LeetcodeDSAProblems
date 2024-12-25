@@ -10,7 +10,8 @@ public class ArmstrongNumber {
                 .stream()
                 .filter(ArmstrongNumber::isArmstrong)
                 .toList();
-        armstrongNumbers.stream().forEach((s)->System.out.print(s+" "));
+        armstrongNumbers.forEach((s)->System.out.print(s+" "));
+        //armstrongNumbers.stream().forEach((s)->System.out.print(s+" "));
     }
 
     private static boolean isArmstrong(Integer num) {
@@ -19,10 +20,9 @@ public class ArmstrongNumber {
         int numberOfDigit = String.valueOf(num).length();
         while(num!=0){
             int digit = num%10;
-            sum += Math.pow(digit,numberOfDigit);
+            sum += (int) Math.pow(digit,numberOfDigit);
             num = num/10;
         }
-        if(sum == originalNum) return true;
-        return false;
+        return sum == originalNum;
     }
 }
