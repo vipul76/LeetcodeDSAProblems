@@ -1,4 +1,4 @@
-package streams_interview;
+package streams_interview.string;
 
 import java.util.*;
 import java.util.stream.Collectors;
