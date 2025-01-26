@@ -1,5 +1,7 @@
 package streams_interview;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -20,7 +22,6 @@ public class SumOfEvenOrOdd {
                 .mapToInt(Integer::intValue)
                 .sum();
         System.out.println(odd);
-
 
         //Way 2 -> Collecting the sum of even numbers and odd numbers
         /*Collectors.partitioningBy(num->num % 2==0) ->
@@ -45,4 +46,21 @@ public class SumOfEvenOrOdd {
         System.out.println("even list : "+ partitionList.get(true));
         System.out.println("odd list : "+ partitionList.get(false));
     }
+
+     /*System.out.println("================================================");
+        numbers
+                .stream()
+                .collect(Collectors.groupingBy(num->num%2==0))
+                .entrySet()
+                .stream()
+                .map(t->{
+                    Map<String,List<Integer>> mapNum= new HashMap<>();
+                    if(t.getKey()) mapNum.put("Even", t.getValue());
+                    else mapNum.put("odd",t.getValue());
+                    return mapNum;
+                })
+                .collect(Collectors.summingInt(Integer::intValue));
+
+        System.out.println();
+        System.out.println("================================================");*/
 }

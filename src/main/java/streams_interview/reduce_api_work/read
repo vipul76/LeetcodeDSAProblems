@@ -1,0 +1,16 @@
+1. What is reduce()?
+The reduce() method is a terminal operation in Java Streams that reduces the elements of a stream to a single value by repeatedly applying a binary operation. It has two forms:
+
+With an identity value:
+reduce(identity, accumulator)
+Without an identity value (Optional result):
+reduce(accumulator)
+Here, we use the identity + accumulator form.
+
+Q)Explanation for
+public int findMin(List<Integer> numbers) {
+                          return numbers
+                                  .stream()
+                                  .reduce(Integer.MAX_VALUE,Integer::min);
+}
+
