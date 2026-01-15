@@ -13,9 +13,10 @@ public class FilterEmployeesbyDepartment {
         );
         //Filter Employees by Department
         List<Employee> hrEmpList = employeeList.stream()
-                .filter(employee -> "HR".equals(employee.getDepartment()))
+                .filter(employee -> "HR".equalsIgnoreCase(employee.getDepartment()))
                 .toList();
-        hrEmpList.stream().forEach((s)->System.out.println(s));
+        hrEmpList.forEach(System.out::println);
+        //hrEmpList.stream().forEach((s)->System.out.println(s));
 
         //Find Employee with the Highest Salary
         Employee highestSalEmp = employeeList.stream()
