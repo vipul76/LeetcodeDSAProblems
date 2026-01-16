@@ -1,6 +1,5 @@
-package com.dsa.striver.streams;
+package com.dsa.striver.streams.string_type;
 
-import java.security.cert.CollectionCertStoreParameters;
 import java.util.stream.Collectors;
 
 public class RemoveCharacterFromString {

@@ -1,4 +1,6 @@
-package yellowCoders;
+package codeDecode;
+
+import java.util.Objects;
 
 public class Employee {
     private long id;
@@ -8,6 +10,11 @@ public class Employee {
     private long salary;
 
     public Employee() {
+    }
+
+    public Employee(long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public Employee(int id, String name, int age, String gender, long sal){
@@ -67,5 +74,20 @@ public class Employee {
                 ", gender='" + gender + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if(obj==this) return true;
+        if(obj == null || getClass() !=obj.getClass()) return false;
+
+        Employee other = (Employee) obj;
+        return (this.getId()==other.getId()  && Objects.equals(this.getName(), other.getName()));
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(getId(),getName());
+        //return (int) getId();
     }
 }

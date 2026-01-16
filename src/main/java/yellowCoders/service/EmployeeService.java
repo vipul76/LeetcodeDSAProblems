@@ -1,30 +1,21 @@
-package yellowCoders;
+package yellowCoders.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
-public class EmployeeService {
-    public static void main(String[] args) {
-        EmployeeDatabase empDb = new EmployeeDatabase();
-        List<Employee> empList = empDb.getEmployees();
+public interface EmployeeService {
 
         //Find Number of males and females
-        Map<String,Long> genderCount = empList
-                .stream()
-                .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
-
-        System.out.println("1. genderCount : "+genderCount);
+        Map<String,Long> GenderCount();
 
         //AvgSalary
-        Map<String,Double> avgSalary = empList
-                .stream()
-                .collect(Collectors.groupingBy(Employee::getGender,
-                        Collectors.averagingDouble(Employee::getSalary)));
-        System.out.println("2. Avg Salary : "+ avgSalary);
+        Map<String,Double> avgSalary();
+
+
+        List<String> highestSalary();
+
+        String secondHighestSalary();
 
 
 
-    }
 }

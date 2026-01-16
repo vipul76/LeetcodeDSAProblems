@@ -14,10 +14,30 @@ public class Employee {
         this.department = department;
     }
 
+    public Employee() {
+
+    }
+
     public String getName() { return name; }
     public int getAge() { return age; }
     public double getSalary() { return salary; }
     public String getDepartment() { return department; }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
 
     @Override
     public String toString() {

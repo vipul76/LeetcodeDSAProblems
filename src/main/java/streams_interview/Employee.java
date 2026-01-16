@@ -15,6 +15,10 @@ public class Employee {
         this.salary=sal;
     }
 
+    public Employee() {
+
+    }
+
     public long getId() {
         return id;
     }
